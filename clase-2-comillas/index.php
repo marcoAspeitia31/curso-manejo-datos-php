@@ -65,7 +65,7 @@ $marco = 'es la mera ley';
 
 echo "$teacher es ${$teacher}";
 
-ECHO '<br><br>';
+echo '<br><br>';
 
 function getUserName(){
     return 'userName';
