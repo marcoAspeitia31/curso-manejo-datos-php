@@ -2,7 +2,7 @@
 
 namespace App;
 
-class validate
+class Validate
 {
     public static function email($value)
     {
