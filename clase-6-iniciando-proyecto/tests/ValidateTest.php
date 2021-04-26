@@ -22,4 +22,13 @@ class ValidateTest extends TestCase
         $url = Validate::url('marco@-devitm.com');
         $this->assertFalse($url);
     }
+
+    public function test_password()
+    {
+        $password = Validate::password('sTestkj90820');
+        $this->assertTrue($password);
+
+        $password = Validate::password('sTestkj9089320821');
+        $this->assertFalse($password);
+    }
 }
