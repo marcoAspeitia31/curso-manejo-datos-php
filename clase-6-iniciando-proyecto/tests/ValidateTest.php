@@ -9,5 +9,8 @@ class ValidateTest extends TestCase
     {
         $email = Validate::email('marco@devitm.com');
         $this->assertTrue($email);
+
+        $email = Validate::email('marco@-devitm.com');
+        $this->assertFalse($email);
     }
 }
