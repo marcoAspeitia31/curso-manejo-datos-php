@@ -3,7 +3,7 @@
 $courses = [
     'frontend'  => 'javascript',
     'backend'   => 'PHP',
-    'android'   => 'Java',
+    'para_android'   => 'Java',
     'multiproposito'    => 'Python'
 ];
 
@@ -12,7 +12,7 @@ var_dump($courses);
 echo '</pre>';
 
 // ¿como iterar arrays complejos?
-// funciones para recorrer arrays complejos
+// funciones para recorrer arrays complejos o arrays asociativos
 foreach ($courses as $key => $value){
     echo "$key: $value<br>";
 }
@@ -47,3 +47,22 @@ array_walk($courses, 'imprimirMayus');
   * array_keys()
   * array_values()
   */
+echo '<br>';
+
+//verifica si existe un key dentro de un array
+echo array_key_exists('para_android', $courses);
+
+echo '<br>';
+
+//verifica si existe un valor "x" dentro de un array
+echo in_array('PHP', $courses, true);
+
+echo '<br>';
+
+//devuelve todas las keys del array
+print_r(array_keys($courses));
+
+echo '<br>';
+
+//devuelve todos los valores del array
+print_r(array_values($courses));
